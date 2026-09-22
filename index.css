@@ -1,0 +1,288 @@
+/*The webkit scrollbar series here is to customize the scroll bar, particularly the one
+inside of the notes app in the website! Here it turns the scrollbar into a yellow color
+and if the user hovers the scroll bar it will turn gold.*/
+
+::-webkit-scrollbar {
+       /*This defines how thick the scroll bar will be.*/
+       width: 10px;
+}
+
+::-webkit-scrollbar-track {
+       /*This defines what the background color of the track will be.*/
+       background: #f1f1f1
+}
+
+::-webkit-scrollbar-thumb {
+       /*This defines the scroll bar color.*/
+       background:#f8d32f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+       /*This tells the scroll bar to turn gold when hovered!*/
+       background:#b1982b;
+}
+
+/*This is related to the downloaded font package and allows fonts to be custom in this type!
+Related to the Pixelfy_Sans folder.*/
+@font-face {
+       font-family: pixelSans;
+       src: url(/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf);
+}
+
+/*Specific font changes made just for the Notes app. We change font into Pixel Sans
+and we specify the specific pixel size for the diarytext class.*/
+h4 { font-family: pixelSans; 
+}
+
+.diarytext { font-family: pixelSans;
+             font-size: 15px;
+}
+
+/*This represents the CSS used to modify the background of the entire website. 
+Heavily backrooms inspired colors, chose them due to wanting a more liminal feel.*/
+body { background-color:#bfb982;
+       margin: 0;
+       padding: 0;
+
+}
+/*This represents the bottom bar on the main website! This bottom bar houses both the
+welcome class in text displayed at the bottom left and the functional .js clock with 
+the date in bottom right. Defines location, size, font and color.*/
+.bottombar { overflow: hidden;
+             margin: 0;
+             background-color: antiquewhite;
+             position: fixed;
+             bottom: 0;
+             width: 100%;
+             height: 35px;
+}
+
+.welcome {font-family: pixelSans; 
+          position: fixed;
+          bottom: -10px
+}
+
+.clock {  font-family: pixelSans;
+          position: fixed;
+          bottom: 7.5px;
+          right:0
+}
+
+/*From here will be the CSS for the Files.*/
+
+.folder{ /*Location within the site + unmoveable!*/
+         position: fixed;
+         right: 10px;
+}
+
+.folderin { /*This defines the background track of the Folder once opened.
+              This deals with the positioning, the color and the size!*/
+           width: 100%;
+           height: 100%;
+           background-color: rgb(247, 241, 234);
+           position: absolute;
+           display: none;
+           justify-content: center;
+           align-items: center;
+}
+
+.folderintop { /*Top color bar for the folder. Also describes positioning and location.*/
+              overflow: hidden;
+              margin:0;
+              background-color: #a93c4b;
+              position: fixed;
+              top: 0;
+              width: 100%;
+              height: 35px;
+}
+
+.leavefolder { /*Exit color bar for the folder! I'm going to use yellow!*/
+              width: 2.5%;
+              height: 35px;
+              background-color: #f8d32f;
+              top: 0;
+              right: 0;
+              position: fixed;
+}
+
+
+/*The following six are related to the workings of the Lucid Dreaming App Icon, shown by
+the LD and sleeping face inside.*/
+
+.apptopbar { /*Defines position, size, color and height of the blue bar at the top
+              of the webpage image once opened.*/
+             overflow: hidden;
+             margin:0;
+             background-color: #2d6bad;
+             position: fixed;
+             top: 0;
+             width: 100%;
+             height: 35px;
+}
+
+.appicon { /*Tells the website where the app should be placed, and makes it immovable*/
+           position: fixed;
+           left: 15px;
+           top: 5px;
+}
+
+.nestedWebsite { /*The main website background. Defines the color, flexbox and position.*/
+                 width: auto;
+                 height: auto;
+                 background-color: white;
+                 position: absolute;
+                 display: none;
+                 justify-content: center;
+                 align-items: center;
+}
+
+.exitButton { /*Defines the little red square that allows you to exit the site.
+              The size, the location inside of the blue bar and what color it is.*/
+              width: 2.5%;
+              height: 35px;
+              background-color: crimson;
+              top: 0;
+              right: 0;
+              position: fixed;
+}
+
+.textlabel { /*This represents the text label on the blue bar! Defines font, size and location.*/
+             color: white; 
+             right: 45%;
+             position: fixed;
+             top: -10px;
+             font-size: 17px;
+             font-family: pixelSans;
+}
+
+.byebyetext { /*This is the small X inside of any button that allows you to close things.*/
+              right: 12px;
+              top: -7px;
+              position: fixed;
+              font-family: pixelSans;
+}
+
+/*Everything from here and onwards is used to define and change attributes ranging from location
+to color to position to size to fonts regarding the silly notes app!*/
+
+.notes { /*Defines app location inside of the website and position is immovable.*/
+         position: fixed;
+         left: 12px;
+         top: 65px;
+       }
+
+.notepad { /*This defines the background track of the notepad once opened.
+             This deals with the positioning, the color and the size!*/
+           width: auto;
+           height: auto;
+           background-color: white;
+           position: absolute;
+           display: none;
+           justify-content: center;
+           align-items: center;
+}
+
+.notepadtop { /*This deals with the top bar that holds text inside. This is the blue
+                bar that shows up when you open the notes app.*/
+              overflow: hidden;
+              margin:0;
+              background-color: #1c6d95;
+              position: fixed;
+              top: 0;
+              width: 100%;
+              height: 35px;
+}
+
+.leavenotes { /*Funny yellow button that exits the notes app once clicked.
+                I found yellow with blue to look better than red since it'll
+                look like a cheap copy pasta if I just copied the color for 
+                The Lucid Dreaming App. This defines the color, size and position.*/
+              width: 2.5%;
+              height: 35px;
+              background-color: #f8d32f;
+              top: 0;
+              right: 0;
+              position: fixed;
+}
+
+/*This will be the part relating to the nested Contacts App.*/
+.contacts { /*Tells the website where the contacts should be inside of the folder, and makes it immovable*/
+           position: fixed;
+           left: 5px;
+           top: 45px;
+}
+
+.incontacts { width: 100%; /*What the background of inside the contacts will look like and the color and position*/
+              height: 100%;
+              background-color: white;
+              position: absolute;
+              display: none;
+              justify-content: center;
+              align-items: center;
+}
+
+.contactstop { overflow: hidden; /*What the top bar will look like for the contacts from color to position to if it's moveable or not.*/
+               margin:0;
+               background-color: #7bb5d2;
+               position: fixed;
+               top: 35px;
+               width: 100%;
+               height: 35px;
+}
+
+.leavecontacts { width: 2.5%; /*This is the little button that represents the exit button. This CSS defines the color, position and location of the button.*/
+                 height: 35px;
+                 background-color: #a93c4b;
+                 top: 35px;
+                 right: 0;
+                 position: fixed;
+}
+
+.nestedtextlabel { color: white; /*This defines the position of the text label except the proportions have been modified so that it looks good as a nested text.*/
+                   right: 41%;
+                   position: fixed;
+                   top: 25px;
+                   font-size: 17px;
+                   font-family: pixelSans;
+}
+
+.nestedbyebyetext { /*This is the small X inside of any button that allows you to close things. This one has been modified to allow it to look nice even when nested.*/
+              right: 11px;
+              top: 28px;
+              position: fixed;
+              font-family: pixelSans;
+}
+
+/*This part will be all about the ReadMe CSS!*/
+.readme { /*Tells the website where the readme should be inside of the folder, and makes it immovable*/
+           position: fixed;
+           left: 55px;
+           top: 45px;
+}
+
+.inreadme {   width: auto; /*What the inside of the README will look like including the color and position*/
+              height: auto;
+              background-color: white;
+              position: absolute;
+              display: none;
+              justify-content: center;
+              align-items: center;
+}
+
+.readmetop {   overflow: hidden; /*What the top bar will look like for the contacts from color to position to if it's moveable or not.*/
+               margin:0;
+               background-color: #7bb5d2;
+               position: fixed;
+               top: 35px;
+               width: 100%;
+               height: 35px;
+}
+
+.leavereadme { width: 2.5%; /*This is the little button that represents the exit button. This CSS defines the color, position and location of the button.*/
+                 height: 35px;
+                 background-color: #a93c4b;
+                 top: 35px;
+                 right: 0;
+                 position: fixed;
+}
+
