@@ -260,8 +260,8 @@ to color to position to size to fonts regarding the silly notes app!*/
            top: 45px;
 }
 
-.inreadme {   width: auto; /*What the inside of the README will look like including the color and position*/
-              height: auto;
+.inreadme {   width: 100%; /*What the inside of the README will look like including the color and position*/
+              height: 100%;
               background-color: white;
               position: absolute;
               display: none;
